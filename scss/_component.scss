@@ -1,0 +1,117 @@
+.hamburger-menu{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    // background-color: red;
+    z-index: 300;
+    
+    .menu{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: transform .5s;
+        
+        .menu-line{
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            cursor: pointer;
+            transition: all .5s .5;
+            transform-origin: right;
+        }
+    }
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-left{
+    left: 0;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-right{
+    right: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu{
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-1{
+    transform: rotateZ(-40deg);
+}
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-2{
+    opacity: 0;
+}
+.checkbox:checked ~ .hamburger-menu .menu .menu-line-3{
+    transform: rotateZ(40deg);
+}
+
+
+
+
+.logo{
+    font-size: 70px;
+    color: $color-primary;
+    width: 110px;
+    height: 110px;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    margin-right: 20px;
+    @include flexLayout;
+}   
+
+.main-name {
+    font-family: $font-nunito;
+    font-size: 50px;
+    @include textStyle;   
+    color: $color-secondary;
+}
+
+.sub-name{
+    font-family: $font-josefinSans;
+    font-size: 18px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyle; 
+    
+} 
+
+.main-heading{
+    font-family: $font-dancingScript;
+    color: $color-primary;
+    font-size: 70px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.sub-heading{
+    @include textStyle;
+    font-family: $font-josefinSans;
+    font-size: 40px;
+    color: $color-secondary;
+    text-transform: capitalize;  
+    margin-bottom: 50px;
+}
+ 
+.main-btn{
+    font-family: $font-josefinSans;
+    color: $color-primary;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    width: 170px;
+    height: 45px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+    margin-bottom: 30px;
+    
+    &:hover{
+        background-color: $color-primary;
+        color: #fff;
+    }
+}

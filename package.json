@@ -1,0 +1,11 @@
+{
+  "name": "georgia_restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss --recursive -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
